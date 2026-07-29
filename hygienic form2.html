@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="ur-Latn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desi Murgi ke Ande — 100% Khalis &amp; Saaf-Suthre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF6EA;
+    --cream-2:#F3EAD3;
+    --green-deep:#1F3D25;
+    --green:#2C5233;
+    --green-soft:#4A7A4E;
+    --gold:#C9972B;
+    --gold-light:#E9BE5C;
+    --brown:#7A4F2B;
+    --barn:#A6402E;
+    --ink:#26211A;
+    --ink-soft:#5B5346;
+    --line: rgba(38,33,26,0.12);
+    --radius: 22px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Manrope', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3, .display{
+    font-family:'Fraunces', serif;
+    color:var(--green-deep);
+    margin:0;
+  }
+  p{margin:0;}
+  a{text-decoration:none;color:inherit;}
+  img,svg{display:block;max-width:100%;}
+  .container{
+    max-width:1240px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+  @media (max-width:640px){ .container{padding:0 20px;} }
+
+  /* ---------------- reduced motion ---------------- */
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ---------------- HEADER ---------------- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,246,234,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:28px;
+    padding:16px 32px;
+    flex-wrap:wrap;
+  }
+  .logo-mark{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .logo-badge{
+    width:56px;height:56px;flex:none;
+  }
+  .logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.05;
+  }
+  .logo-text .top{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.55rem;
+    color:var(--green-deep);
+    letter-spacing:.2px;
+  }
+  .logo-text .sub{
+    font-size:.72rem;
+    letter-spacing:2.5px;
+    color:var(--gold);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-top:3px;
+  }
+  .stamp{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    border:2px solid var(--gold);
+    border-radius:100px;
+    padding:8px 20px 8px 12px;
+    background:var(--cream-2);
+    transform:rotate(-2deg);
+  }
+  .stamp .stamp-icon{width:34px;height:34px;flex:none;}
+  .stamp-text{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.02rem;
+    color:var(--green);
+    letter-spacing:.3px;
+  }
+  .stamp-text small{
+    display:block;
+    font-family:'Manrope',sans-serif;
+    font-weight:700;
+    font-size:.6rem;
+    letter-spacing:1.5px;
+    color:var(--barn);
+    text-transform:uppercase;
+  }
+
+  /* ---------------- HERO ---------------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding-top:64px;
+    padding-bottom:70px;
+    background:
+      linear-gradient(180deg, rgba(251,246,234,0) 0%, rgba(251,246,234,0.65) 78%, var(--cream) 100%),
+      linear-gradient(180deg,#DCEBD9 0%, #EFE4C4 55%, var(--cream) 100%);
+  }
+  .hero-farm-bg{
+    position:absolute; inset:0; width:100%; height:100%;
+    opacity:.55;
+  }
+  .hero-content{
+    position:relative;
+    text-align:center;
+  }
+  .eyebrow-row{
+    display:flex; justify-content:center; align-items:center; gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow-row .dash{width:36px;height:2px;background:var(--gold);}
+  .eyebrow{
+    font-size:.78rem;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--green);
+    font-weight:700;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 5.2rem);
+    font-weight:700;
+    line-height:1.02;
+  }
+  .hero h1 span{color:var(--gold);font-style:italic;font-weight:500;}
+  .hero-tagline{
+    max-width:640px;
+    margin:20px auto 0;
+    font-size:1.15rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+  }
+
+  .hero-grid{
+    position:relative;
+    margin-top:56px;
+    display:grid;
+    grid-template-columns:1fr 1.1fr 1fr;
+    gap:40px;
+    align-items:center;
+  }
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr; text-align:center;}
+    .hero-grid .basket-col{order:-1;}
+  }
+  .hero-text-block{
+    text-align:right;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .hero-grid .hero-text-block:last-child{text-align:left;}
+  @media (max-width:980px){
+    .hero-text-block, .hero-grid .hero-text-block:last-child{text-align:center;}
+  }
+  .hero-para{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:18px 20px;
+    box-shadow:0 10px 24px rgba(38,33,26,0.05);
+  }
+  .hero-para .tag{
+    display:inline-block;
+    font-size:.68rem;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--barn);
+    margin-bottom:8px;
+  }
+  .hero-para p{
+    font-size:.98rem;
+    line-height:1.65;
+    color:var(--ink);
+  }
+  .basket-col{
+    position:relative;
+    display:flex;
+    justify-content:center;
+  }
+  .basket-frame{
+    position:relative;
+    width:100%;
+    max-width:420px;
+  }
+  .basket-frame .ring{
+    position:absolute; inset:-18px;
+    border:2px dashed var(--gold-light);
+    border-radius:50%;
+    animation:spin 40s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg);} }
+  .basket-frame svg{position:relative; z-index:2;}
+  .basket-caption{
+    margin-top:18px;
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:1.05rem;
+    color:var(--green);
+  }
+
+  /* ---------------- SECTION LABELS ---------------- */
+  .section{padding:88px 0;}
+  .section-head{
+    text-align:center;
+    max-width:640px;
+    margin:0 auto 52px;
+  }
+  .section-head .eyebrow-row{margin-bottom:14px;}
+  .section-head h2{
+    font-size:clamp(1.9rem, 3.2vw, 2.6rem);
+    font-weight:700;
+  }
+  .section-head p{
+    margin-top:14px;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+    line-height:1.6;
+  }
+
+  /* ---------------- FEATURE CARDS (egg-carton signature) ---------------- */
+  .features-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+  }
+  @media (max-width:980px){ .features-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:560px){ .features-grid{grid-template-columns:1fr;} }
+
+  .egg-card{
+    position:relative;
+    background:#fff;
+    border-radius:0 0 var(--radius) var(--radius);
+    padding:38px 24px 30px;
+    text-align:center;
+    box-shadow:0 14px 30px rgba(38,33,26,0.07);
+    border:1px solid var(--line);
+    border-top:none;
+  }
+  .egg-card .scallop{
+    position:absolute;
+    top:-17px; left:0; right:0;
+    height:34px;
+    background-image: radial-gradient(circle at 10px 17px, #fff 15px, transparent 16px);
+    background-size: 34px 34px;
+    background-repeat:repeat-x;
+    filter:drop-shadow(0 -2px 3px rgba(38,33,26,0.05));
+  }
+  .egg-card .icon-wrap{
+    width:78px;height:78px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    background:var(--cream-2);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .egg-card .icon-wrap svg{width:42px;height:42px;}
+  .egg-card h3{
+    font-size:1.15rem;
+    font-weight:600;
+    margin-bottom:10px;
+  }
+  .egg-card p{
+    font-size:.92rem;
+    line-height:1.6;
+    color:var(--ink-soft);
+  }
+  .egg-card .num{
+    position:absolute;
+    top:14px; right:18px;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:.85rem;
+    color:var(--gold);
+    font-weight:600;
+  }
+
+  /* ---------------- SPECIAL FEATURES GRID ---------------- */
+  .special-section{
+    background:var(--green-deep);
+    color:#fff;
+  }
+  .special-section .section-head h2{color:#fff;}
+  .special-section .section-head p{color:rgba(255,255,255,0.72);}
+  .special-section .eyebrow{color:var(--gold-light);}
+  .special-section .dash{background:var(--gold-light);}
+
+  .special-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:22px;
+  }
+  @media (max-width:980px){ .special-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .special-grid{grid-template-columns:1fr;} }
+
+  .special-card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    border-radius:18px;
+    padding:28px 18px;
+    text-align:center;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .special-card:hover{
+    transform:translateY(-6px);
+    background:rgba(255,255,255,0.1);
+  }
+  .special-card .icon-wrap{
+    width:60px;height:60px;
+    margin:0 auto 16px;
+    border-radius:16px;
+    background:var(--gold);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .special-card .icon-wrap svg{width:32px;height:32px;}
+  .special-card h4{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.05rem;
+    margin-bottom:8px;
+  }
+  .special-card p{
+    font-size:.85rem;
+    line-height:1.55;
+    color:rgba(255,255,255,0.75);
+  }
+
+  /* ---------------- CTA BANNER ---------------- */
+  .cta-banner{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(120deg, var(--green) 0%, var(--green-deep) 100%);
+    border-radius:28px;
+    margin:0 auto;
+    max-width:1240px;
+    padding:0;
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    align-items:center;
+  }
+  @media (max-width:900px){ .cta-banner{grid-template-columns:1fr;} }
+  .cta-left{
+    padding:52px 44px;
+    color:#fff;
+  }
+  .cta-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:var(--gold);
+    color:var(--green-deep);
+    font-weight:800;
+    font-size:.72rem;
+    letter-spacing:2px;
+    padding:8px 16px;
+    border-radius:100px;
+    margin-bottom:20px;
+  }
+  .cta-badge svg{width:16px;height:16px;}
+  .cta-left h3{
+    color:#fff;
+    font-size:clamp(1.6rem,3vw,2.2rem);
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:14px;
+  }
+  .cta-left p{
+    color:rgba(255,255,255,0.78);
+    font-size:1rem;
+    line-height:1.6;
+    max-width:440px;
+    margin-bottom:26px;
+  }
+  .cta-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--gold);
+    color:var(--green-deep);
+    font-weight:800;
+    font-size:1.02rem;
+    padding:15px 30px;
+    border-radius:100px;
+    box-shadow:0 12px 24px rgba(201,151,43,0.35);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .cta-btn:hover{transform:translateY(-3px); box-shadow:0 16px 30px rgba(201,151,43,0.45);}
+  .cta-btn svg{width:20px;height:20px;}
+  .cta-right{
+    position:relative;
+    height:100%;
+    min-height:280px;
+    background:rgba(255,255,255,0.04);
+    border-left:1px dashed rgba(255,255,255,0.22);
+  }
+  @media (max-width:900px){ .cta-right{border-left:none; border-top:1px dashed rgba(255,255,255,0.22);} }
+  .cta-right svg{width:100%;height:100%;}
+
+  /* ---------------- FOOTER ---------------- */
+  footer.site{
+    background:var(--ink);
+    color:rgba(255,255,255,0.85);
+    padding:56px 0 26px;
+    margin-top:90px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:36px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+  @media (max-width:820px){ .footer-grid{grid-template-columns:1fr; text-align:center;} }
+  .footer-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:14px;
+  }
+  @media (max-width:820px){ .footer-brand{justify-content:center;} }
+  .footer-brand .logo-badge{width:44px;height:44px;}
+  .footer-brand span{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:1.25rem;
+    color:#fff;
+  }
+  .footer-desc{
+    font-size:.92rem;
+    line-height:1.7;
+    color:rgba(255,255,255,0.6);
+    max-width:340px;
+  }
+  @media (max-width:820px){ .footer-desc{margin:0 auto;} }
+  .footer-col h5{
+    font-family:'Manrope',sans-serif;
+    font-size:.78rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--gold-light);
+    margin-bottom:18px;
+    font-weight:800;
+  }
+  .contact-links{display:flex; flex-direction:column; gap:14px;}
+  .contact-link{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:12px 16px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:14px;
+    transition:background .2s ease, transform .2s ease;
+  }
+  @media (max-width:820px){ .contact-link{justify-content:center;} }
+  .contact-link:hover{background:rgba(255,255,255,0.1); transform:translateY(-2px);}
+  .contact-link .ic{
+    width:38px;height:38px;flex:none;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .contact-link.whatsapp .ic{background:#25D366;}
+  .contact-link.phone .ic{background:var(--gold);}
+  .contact-link .ic svg{width:20px;height:20px;}
+  .contact-link .txt{display:flex;flex-direction:column; text-align:left;}
+  .contact-link .txt b{font-size:.95rem; color:#fff;}
+  .contact-link .txt small{font-size:.75rem; color:rgba(255,255,255,0.55);}
+  .footer-msg{
+    font-size:.92rem;
+    line-height:1.7;
+    color:rgba(255,255,255,0.65);
+  }
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-top:22px;
+    font-size:.8rem;
+    color:rgba(255,255,255,0.45);
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  @media (max-width:820px){ .footer-bottom{justify-content:center; text-align:center;} }
+
+  :focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site">
+  <div class="header-inner">
+    <div class="logo-mark">
+      <svg class="logo-badge" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="31" fill="#2C5233"/>
+        <circle cx="32" cy="32" r="31" stroke="#C9972B" stroke-width="2"/>
+        <path d="M32 14c-8 0-13 7-13 14 0 8 6 16 13 16s13-8 13-16c0-7-5-14-13-14Z" fill="#F3EAD3"/>
+        <path d="M32 17c2 3 3 5 3 7.5 0 2-1.4 3.5-3 3.5s-3-1.5-3-3.5c0-2.5 1-4.5 3-7.5Z" fill="#C9972B"/>
+        <path d="M22 30c1-2 3-3 5-3M42 30c-1-2-3-3-5-3" stroke="#2C5233" stroke-width="1.4" stroke-linecap="round"/>
+      </svg>
+      <div class="logo-text">
+        <span class="top">Desi Murgi ke Ande</span>
+        <span class="sub">Farm Fresh &middot; Multan</span>
+      </div>
+    </div>
+
+    <div class="stamp">
+      <svg class="stamp-icon" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="19" fill="#F3EAD3" stroke="#C9972B" stroke-width="2"/>
+        <path d="M13 21l4.5 4.5L28 15" stroke="#2C5233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="stamp-text">100% Khalis &amp; Saaf-Suthre<small>Guaranteed Quality</small></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <svg class="hero-farm-bg" viewBox="0 0 1400 500" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1400" height="500" fill="none"/>
+    <path d="M0 340 Q 200 300 400 335 T 800 330 T 1400 320 V500 H0 Z" fill="#DCEAD8"/>
+    <path d="M0 380 Q 250 350 500 380 T 1000 375 T 1400 370 V500 H0 Z" fill="#C8DFC3"/>
+    <!-- barn -->
+    <g transform="translate(120,300)">
+      <rect x="0" y="30" width="90" height="60" fill="#A6402E"/>
+      <polygon points="-8,30 45,-5 98,30" fill="#7A2E20"/>
+      <rect x="30" y="55" width="26" height="35" fill="#F3EAD3"/>
+      <rect x="10" y="40" width="16" height="16" fill="#F3EAD3"/>
+      <rect x="64" y="40" width="16" height="16" fill="#F3EAD3"/>
+    </g>
+    <!-- fence -->
+    <g stroke="#7A4F2B" stroke-width="4">
+      <line x1="260" y1="345" x2="260" y2="385"/>
+      <line x1="300" y1="345" x2="300" y2="385"/>
+      <line x1="340" y1="345" x2="340" y2="385"/>
+      <line x1="380" y1="345" x2="380" y2="385"/>
+      <line x1="250" y1="352" x2="390" y2="352"/>
+      <line x1="250" y1="370" x2="390" y2="370"/>
+    </g>
+    <!-- chickens roaming -->
+    <g transform="translate(520,360) scale(1.1)">
+      <ellipse cx="0" cy="10" rx="20" ry="15" fill="#F3EAD3"/>
+      <circle cx="16" cy="-2" r="9" fill="#F3EAD3"/>
+      <path d="M14 -10 q3 -6 8 -2 q-4 2 -5 6Z" fill="#C9972B"/>
+      <polygon points="24,-2 32,1 24,4" fill="#A6402E"/>
+      <path d="M-6 22 L-6 30 M6 22 L6 30" stroke="#C9972B" stroke-width="2.5"/>
+    </g>
+    <g transform="translate(610,375) scale(0.9) rotate(8)">
+      <ellipse cx="0" cy="10" rx="20" ry="15" fill="#EDE0BE"/>
+      <circle cx="-16" cy="-2" r="9" fill="#EDE0BE"/>
+      <path d="M-14 -10 q-3 -6 -8 -2 q4 2 5 6Z" fill="#C9972B"/>
+      <polygon points="-24,-2 -32,1 -24,4" fill="#A6402E"/>
+      <path d="M-6 22 L-6 30 M6 22 L6 30" stroke="#C9972B" stroke-width="2.5"/>
+    </g>
+    <g transform="translate(870,365) scale(1)">
+      <ellipse cx="0" cy="10" rx="20" ry="15" fill="#F3EAD3"/>
+      <circle cx="16" cy="-2" r="9" fill="#F3EAD3"/>
+      <path d="M14 -10 q3 -6 8 -2 q-4 2 -5 6Z" fill="#C9972B"/>
+      <polygon points="24,-2 32,1 24,4" fill="#A6402E"/>
+      <path d="M-6 22 L-6 30 M6 22 L6 30" stroke="#C9972B" stroke-width="2.5"/>
+    </g>
+    <!-- coop right -->
+    <g transform="translate(1150,290)">
+      <rect x="0" y="35" width="110" height="55" fill="#7A4F2B"/>
+      <polygon points="-10,35 55,0 120,35" fill="#5C3B20"/>
+      <rect x="20" y="55" width="70" height="35" fill="#4A2F18"/>
+      <line x1="20" y1="72" x2="90" y2="72" stroke="#7A4F2B" stroke-width="3"/>
+      <line x1="55" y1="55" x2="55" y2="90" stroke="#7A4F2B" stroke-width="3"/>
+    </g>
+    <!-- trees -->
+    <circle cx="60" cy="280" r="30" fill="#7FA876"/>
+    <rect x="55" y="300" width="10" height="30" fill="#7A4F2B"/>
+    <circle cx="1320" cy="270" r="34" fill="#6E9A66"/>
+    <rect x="1314" y="295" width="12" height="35" fill="#7A4F2B"/>
+  </svg>
+
+  <div class="container hero-content">
+    <div class="eyebrow-row"><span class="dash"></span><span class="eyebrow">Khalis Desi Ande</span><span class="dash"></span></div>
+    <h1>Desi Murgi ke <span>Ande</span></h1>
+    <p class="hero-tagline">Aapke ghar tak seedha farm se — bilkul khalis, taaza aur bina kisi chemical ke. Sehatmand zindagi ki shuruaat, roz ke desi ande se.</p>
+
+    <div class="hero-grid">
+      <div class="hero-text-block">
+        <div class="hero-para">
+          <span class="tag">Sehat ke liye</span>
+          <p>Desi ande protein, vitamins aur zaroori minerals se bharpoor hote hain jo poori family ki sehat behtar banane mein madad dete hain — har roz ke istemal ke liye behtareen intekhaab.</p>
+        </div>
+        <div class="hero-para">
+          <span class="tag">Farm-fresh guarantee</span>
+          <p>Hamare ande seedha khule farm se aate hain, jahan murghiyan azaadi se ghoomti aur qudrati khuraak khati hain — is liye har anda taaza aur khalis hota hai.</p>
+        </div>
+      </div>
+
+      <div class="basket-col">
+        <div class="basket-frame">
+          <div class="ring"></div>
+          <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="210" cy="330" rx="160" ry="18" fill="#26211A" opacity="0.08"/>
+            <!-- basket -->
+            <path d="M60 210 h300 l-24 120 a20 20 0 0 1-20 16 H104 a20 20 0 0 1-20-16 Z" fill="#B7833F"/>
+            <path d="M60 210 h300 l-6 30 H66Z" fill="#966A31"/>
+            <g stroke="#7A4F2B" stroke-width="3" opacity="0.6">
+              <path d="M78 246 h264"/>
+              <path d="M84 276 h252"/>
+              <path d="M92 306 h236"/>
+            </g>
+            <path d="M96 210 C 96 150 324 150 324 210" fill="none" stroke="#7A4F2B" stroke-width="10"/>
+            <!-- eggs -->
+            <g>
+              <ellipse cx="130" cy="205" rx="34" ry="42" fill="#F3EAD3"/>
+              <ellipse cx="185" cy="190" rx="36" ry="45" fill="#EFE0BC"/>
+              <ellipse cx="242" cy="196" rx="35" ry="44" fill="#F6EEDA"/>
+              <ellipse cx="296" cy="208" rx="33" ry="41" fill="#EBDCB8"/>
+              <ellipse cx="158" cy="228" rx="33" ry="41" fill="#F3EAD3"/>
+              <ellipse cx="215" cy="236" rx="34" ry="42" fill="#EFE0BC"/>
+              <ellipse cx="270" cy="230" rx="33" ry="41" fill="#F6EEDA"/>
+              <ellipse cx="112" cy="240" rx="10" ry="12" fill="#ffffff" opacity="0.55"/>
+              <ellipse cx="230" cy="222" rx="10" ry="12" fill="#ffffff" opacity="0.5"/>
+              <ellipse cx="280" cy="216" rx="9" ry="11" fill="#ffffff" opacity="0.5"/>
+            </g>
+            <!-- straw hint -->
+            <g stroke="#C9972B" stroke-width="2" opacity="0.55">
+              <path d="M70 214 q10 -10 20 0"/>
+              <path d="M320 214 q-10 -10 -20 0"/>
+              <path d="M340 220 q10 -8 18 2"/>
+            </g>
+          </svg>
+        </div>
+        <p class="basket-caption">Taaza ande, seedha aapki basket mein</p>
+      </div>
+
+      <div class="hero-text-block">
+        <div class="hero-para">
+          <span class="tag">Bachon ke liye</span>
+          <p>Bachon ki nashonuma aur dimaghi nashv-o-numa ke liye desi ande ek behtareen qudrati ghiza hain — roz ke naashte mein shamil karna un ki sehat ke liye faidamand hai.</p>
+        </div>
+        <div class="hero-para">
+          <span class="tag">Bilkul saaf-suthra</span>
+          <p>Hamari poori process hygiene ke usolon par mabni hai — chunte waqt se le kar pack karne tak, har qadam par safai ka khaas khayal rakha jata hai.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="section" id="khususiyaat">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow-row"><span class="dash"></span><span class="eyebrow">Kyun Chunein Hamein</span><span class="dash"></span></div>
+      <h2>Hamari Khususiyaat</h2>
+      <p>Har anda in usoolon par pura utarta hai — tab hi wo aapki basket tak pohanchta hai.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="egg-card">
+        <span class="scallop"></span>
+        <span class="num">01</span>
+        <div class="icon-wrap">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#2C5233"/><path d="M14 25l7 7 13-15" stroke="#F3EAD3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Hygienic</h3>
+        <p>Chunte, dhote aur pack karte waqt safai ke sakht usool follow kiye jate hain, taake har anda mehfooz aur saaf pohanche.</p>
+      </div>
+
+      <div class="egg-card">
+        <span class="scallop"></span>
+        <span class="num">02</span>
+        <div class="icon-wrap">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#C9972B"/><path d="M24 12c-1 4-6 6-6 12a6 6 0 0012 0c0-6-5-8-6-12Z" fill="#F3EAD3"/></svg>
+        </div>
+        <h3>Fresh</h3>
+        <p>Farm se aap tak kam se kam waqt mein pohanchne wale ande — is liye har baar taazgi ki zamanat.</p>
+      </div>
+
+      <div class="egg-card">
+        <span class="scallop"></span>
+        <span class="num">03</span>
+        <div class="icon-wrap">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#A6402E"/><path d="M16 16l16 16M32 16L16 32" stroke="#F3EAD3" stroke-width="3.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>No Chemicals</h3>
+        <p>Koi hormone, koi masnoi spray istemal nahi hota — sirf qudrati khuraak aur khule farm ka saaf maahol.</p>
+      </div>
+
+      <div class="egg-card">
+        <span class="scallop"></span>
+        <span class="num">04</span>
+        <div class="icon-wrap">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="#4A7A4E"/><circle cx="24" cy="19" r="6" fill="#F3EAD3"/><path d="M13 36c1-7 5-11 11-11s10 4 11 11" stroke="#F3EAD3" stroke-width="3.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Bachon Ke Liye Behtareen</h3>
+        <p>Growing age ke bachon ki zaroori ghiza ke liye desi ande ek mukammal aur bharosemand intekhaab hain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECIAL FEATURES ============ -->
+<section class="section special-section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow-row"><span class="dash"></span><span class="eyebrow">Faide</span><span class="dash"></span></div>
+      <h2>Desi Ande, Sehat Ke Paanch Faide</h2>
+      <p>Ek anda, itne saare fawaid — roz ki khuraak ka aham hissa.</p>
+    </div>
+
+    <div class="special-grid">
+      <div class="special-card">
+        <div class="icon-wrap"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4l4 8h8l-6 6 2 10-8-6-8 6 2-10-6-6h8Z" fill="#1F3D25"/></svg></div>
+        <h4>Protein</h4>
+        <p>Jism ki nashonuma aur muscle taqat ke liye bharpoor protein.</p>
+      </div>
+      <div class="special-card">
+        <div class="icon-wrap"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4c-6 4-9 9-9 14a9 9 0 0018 0c0-5-3-10-9-14Z" fill="#1F3D25"/></svg></div>
+        <h4>Natural</h4>
+        <p>Bina kisi milawat ke, bilkul qudrati aur khalis tareeqe se hasil kiye gaye.</p>
+      </div>
+      <div class="special-card">
+        <div class="icon-wrap"><svg viewBox="0 0 32 32" fill="none"><path d="M16 3l3 6 6 1-4.5 4.5L21 21l-5-3-5 3 1.5-6.5L8 10l6-1Z" fill="#1F3D25"/></svg></div>
+        <h4>Immunity</h4>
+        <p>Jisman quwwat-e-mudafiat badha kar bemariyon se bachao mein madadgar.</p>
+      </div>
+      <div class="special-card">
+        <div class="icon-wrap"><svg viewBox="0 0 32 32" fill="none"><path d="M16 4a10 10 0 00-4 19c0 2 1 3 2 3h4c1 0 2-1 2-3a10 10 0 00-4-19Z" fill="#1F3D25"/></svg></div>
+        <h4>Brain Health</h4>
+        <p>Dimaghi nashv-o-numa aur yaddasht behtar banane mein sahayak.</p>
+      </div>
+      <div class="special-card">
+        <div class="icon-wrap"><svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="10" r="5" fill="#1F3D25"/><path d="M7 27c1-6 5-9 9-9s8 3 9 9" fill="#1F3D25"/></svg></div>
+        <h4>Bachon Ke Liye</h4>
+        <p>Bachon ki healthy growth ke liye rozana ki behtareen ghiza.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="cta-banner">
+      <div class="cta-left">
+        <span class="cta-badge">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="#1F3D25" stroke-width="2.5" stroke-linecap="round"/></svg>
+          HOME DELIVERY AVAILABLE
+        </span>
+        <h3>Multan bhar mein taaza desi ande, seedha aapke darwaze tak</h3>
+        <p>Order karein aur farm-fresh khalis ande usi din apne ghar mangwayein — koi milawat nahi, sirf khalis quwwat.</p>
+        <a href="https://wa.me/923042251765" class="cta-btn">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 20l1.6-4.8A8 8 0 1112 20a8 8 0 01-4.6-1.4L4 20Z" stroke="#1F3D25" stroke-width="1.8"/></svg>
+          Order Ke Liye Abhi Rabta Karein
+        </a>
+      </div>
+      <div class="cta-right">
+        <svg viewBox="0 0 460 320" xmlns="http://www.w3.org/2000/svg">
+          <rect width="460" height="320" fill="transparent"/>
+          <!-- stylized multan city map -->
+          <g stroke="rgba(255,255,255,0.25)" stroke-width="2" fill="none">
+            <path d="M20 60 h420"/>
+            <path d="M20 130 h420"/>
+            <path d="M20 200 h420"/>
+            <path d="M20 260 h420"/>
+            <path d="M90 20 v290"/>
+            <path d="M190 20 v290"/>
+            <path d="M290 20 v290"/>
+            <path d="M380 20 v290"/>
+          </g>
+          <circle cx="190" cy="130" r="7" fill="#E9BE5C"/>
+          <text x="204" y="135" fill="#F3EAD3" font-size="13" font-family="Manrope, sans-serif" font-weight="700">Multan Farm</text>
+          <circle cx="330" cy="220" r="6" fill="#fff"/>
+          <!-- dotted delivery route -->
+          <path d="M190 130 C 250 160, 260 190, 330 220" stroke="#E9BE5C" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round" fill="none"/>
+          <!-- delivery truck -->
+          <g transform="translate(255,175) rotate(28)">
+            <rect x="0" y="0" width="34" height="18" rx="2" fill="#F3EAD3"/>
+            <rect x="34" y="5" width="14" height="13" rx="2" fill="#C9972B"/>
+            <circle cx="9" cy="20" r="4" fill="#1F3D25"/>
+            <circle cx="38" cy="20" r="4" fill="#1F3D25"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg class="logo-badge" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="31" fill="#2C5233"/>
+            <circle cx="32" cy="32" r="31" stroke="#C9972B" stroke-width="2"/>
+            <path d="M32 14c-8 0-13 7-13 14 0 8 6 16 13 16s13-8 13-16c0-7-5-14-13-14Z" fill="#F3EAD3"/>
+          </svg>
+          <span>Desi Murgi ke Ande</span>
+        </div>
+        <p class="footer-desc">Khalis, taaza aur bilkul saaf-suthre desi ande — seedha farm se aapke ghar tak, Multan ke andar home delivery ke saath.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Rabta Karein</h5>
+        <div class="contact-links">
+          <a class="contact-link whatsapp" href="https://wa.me/923042251765" target="_blank" rel="noopener">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20l1.6-4.8A8 8 0 1112 20a8 8 0 01-4.6-1.4L4 20Z" stroke="#fff" stroke-width="1.8"/></svg></span>
+            <span class="txt"><b>WhatsApp / Call</b><small>+92 304 2251765</small></span>
+          </a>
+          <a class="contact-link phone" href="tel:+923042251765">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1a12 12 0 006 6l1-2 5 2v3a2 2 0 01-2 2A16 16 0 014 5a2 2 0 012-2Z" stroke="#1F3D25" stroke-width="1.6" fill="none"/></svg></span>
+            <span class="txt"><b>Seedha Call Karein</b><small>Roz subah 8 se raat 9 tak</small></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Order Ka Tareeqa</h5>
+        <p class="footer-msg">Message: Direct inbox mein order book karwayein — apna naam, address aur quantity likh kar bhej dein, hum jald rabta karenge.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Desi Murgi ke Ande — Multan.</span>
+      <span>100% Khalis &amp; Saaf-Suthre</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
